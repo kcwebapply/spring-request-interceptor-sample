@@ -15,12 +15,6 @@ import java.util.Collections;
 public class APIController {
 
 
-    @Bean
-    public RestTemplate getInterceptorRestTemplate(ApiRequestInterceptor apiRequestInterceptor){
-        RestTemplate restTemplate = new RestTemplate();
-        restTemplate.setInterceptors(Collections.singletonList(apiRequestInterceptor));
-        return restTemplate;
-    }
 
     @Autowired
     RestTemplate restTemplate;
